@@ -2,20 +2,19 @@
 
 const f = document.querySelector("#primer-numero");
 const c = document.querySelector("#segundo-numero");
+const mat = document.querySelector("#segundo-numero");
 const form = document.querySelector("#sumar-form");
 // const div = document.querySelector("#resultado-div");
 // Obtener la referencia al elemento div que contendrá la tabla
 var tablaDiv = document.getElementById("tabla-matriz");
 
-
-
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
+  
   let filas = Number.parseInt(f.value);
   let columnas = Number.parseInt(c.value);
   var miMatriz=Matriz(filas,columnas);
+
   function Matriz(filas, columnas) {
     var matriz = [];
     for (var i = 0; i < filas; i++) {
@@ -27,6 +26,7 @@ form.addEventListener("submit", (event) => {
     }
     return matriz;
   }
+
  
   var tabla = document.createElement("table");
 
