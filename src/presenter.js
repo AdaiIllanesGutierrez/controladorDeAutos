@@ -1,13 +1,10 @@
 import Matriz from "./crearmatriz";
 
-const f = document.querySelector("#primer-numero");
-const c = document.querySelector("#segundo-numero");
+const cadenalimite = document.querySelector("#cadena");
 const form = document.querySelector("#sumar-form");
 // const div = document.querySelector("#resultado-div");
 // Obtener la referencia al elemento div que contendrá la tabla
 var tablaDiv = document.getElementById("tabla-matriz");
-
-
 
 
 form.addEventListener("submit", (event) => {
@@ -28,8 +25,9 @@ form.addEventListener("submit", (event) => {
     return matriz;
   }*/
  
+  
+  let miMatriz = Matriz(cadenalimite.value);
   var tabla = document.createElement("table");
-
   for (var i = 0; i < miMatriz.length; i++) {
   var fila = tabla.insertRow();
   for (var j = 0; j < miMatriz[i].length; j++) {
