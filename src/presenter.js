@@ -1,4 +1,4 @@
-//import Matriz from "./controladorDeAuto";
+import Matriz from "./crearmatriz";
 
 const f = document.querySelector("#primer-numero");
 const c = document.querySelector("#segundo-numero");
@@ -13,9 +13,14 @@ form.addEventListener("submit", (event) => {
   
   let filas = Number.parseInt(f.value);
   let columnas = Number.parseInt(c.value);
+<<<<<<< HEAD
   var miMatriz=Matriz(filas,columnas);
 
   function Matriz(filas, columnas) {
+=======
+  let miMatriz = Matriz(filas,columnas);
+  /*function Matriz(filas, columnas) {
+>>>>>>> 337d5aabcb1d70a64f87626a62ed4d011eb7220d
     var matriz = [];
     for (var i = 0; i < filas; i++) {
       matriz[i] = [];
@@ -25,8 +30,12 @@ form.addEventListener("submit", (event) => {
       }
     }
     return matriz;
+<<<<<<< HEAD
   }
 
+=======
+  }*/
+>>>>>>> 337d5aabcb1d70a64f87626a62ed4d011eb7220d
  
   var tabla = document.createElement("table");
 
