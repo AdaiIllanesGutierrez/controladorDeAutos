@@ -31,4 +31,14 @@ function valoresparaMatriz(matriz) {
     }
   }
 } 
+
+function valoresparaMatriz(matriz) {
+  for(var fila = 0; fila < matriz.length; fila ++) {
+    for(var columna = 0; columna < matriz[fila].length; columna ++) {
+      matriz[fila][columna] = "0"
+    }
+  }
+} 
+
+
 export default Matriz;
