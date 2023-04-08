@@ -8,4 +8,8 @@ export class Coordenada {
     get x() {
         return this._x;
     }
+
+    get y() {
+        return this._y;
+    }
 }
