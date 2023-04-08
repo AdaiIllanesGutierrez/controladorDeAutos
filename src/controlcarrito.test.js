@@ -14,5 +14,8 @@ describe("Controlador de Carrito", () => {
     it("Deberia recibir la oreintacion de la coordenada", () => {
         expect(new Coordenada(2,3, "N").orientacion).toEqual("N");
     });
+    it("Deberia recibir la oreintacion de la coordenada", () => {
+        expect(new Coordenada(2,3, "N").orientacion).toEqual("N");
+    });
   });
   

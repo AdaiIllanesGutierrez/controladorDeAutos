@@ -23,4 +23,12 @@ export class Matriz {
         const tamanio = `${this.filas}x${this.columnas}`;
         return tamanio;
     }
+
+    insertar_valor_por_defecto(valor) {
+        for(var i = 0; i < this.filas; i ++) {
+            for(var j = 0; j < this.columnas; j += 1) {
+                this.matriz[i][j] = valor;
+            }
+        }
+    }
 }

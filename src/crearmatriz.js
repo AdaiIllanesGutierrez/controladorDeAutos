@@ -1,4 +1,6 @@
 import { Matriz } from "./classmatriz";
+import { Conduccion } from "./classmanejo";
+import { Coordenada } from "./classcoordenada";
 function cMatriz(limitecadena) {
   const limites = obtenerNumeros(limitecadena);
   const filas = parseInt(limites[0]); 
@@ -7,9 +9,10 @@ function cMatriz(limitecadena) {
   for (var i = 0; i < filas; i++) {
     matriz[i] = new Array(columnas);
   }*/
-  matriz1 = new Matriz(filas, columnas);
-  valoresparaMatriz(matriz1.matriz);
-  return matriz1.matriz;
+  //let matriz1 = new Matriz(filas, columnas);
+  let con = new Conduccion(new Matriz(filas, columnas), new Coordenada(2,3,"N"));
+  con.insertar_Vehiculo_en_mapa();
+  return con.mapa.matriz;
 }
 
 function obtenerNumeros(cadena) {
