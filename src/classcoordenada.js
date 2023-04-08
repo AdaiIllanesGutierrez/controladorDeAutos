@@ -12,4 +12,8 @@ export class Coordenada {
     get y() {
         return this._y;
     }
+
+    get orientacion() {
+        return this._orientacion;
+    }
 }
