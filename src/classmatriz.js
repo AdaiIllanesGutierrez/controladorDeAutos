@@ -16,8 +16,10 @@ export class Matriz {
         return this._columnas;    
     }
 
-    obtenerDimesion() {
-        
+    get matriz() {
+        return this._matriz;    
+    }
+    obtenerDimension() {
         const tamanio = `${this.filas}x${this.columnas}`;
         return tamanio;
     }

@@ -1,4 +1,4 @@
-import Matriz from "./crearmatriz";
+import cMatriz from "./crearmatriz";
 import { Matriz } from "./classmatriz";
 const cadenalimite = document.querySelector("#cadena");
 const form = document.querySelector("#sumar-form");
@@ -11,9 +11,7 @@ var tablaDiv = document.getElementById("tabla-matriz");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  let mat = new Matriz(3,3);
-  console.log(mat.obtenerDimesion());
-  /*let miMatriz = Matriz(cadenalimite.value);
+  let miMatriz = cMatriz(cadenalimite.value);
   var tabla = document.createElement("table");
   for (var i = 0; i < miMatriz.length; i++) {
   var fila = tabla.insertRow();
@@ -23,7 +21,7 @@ form.addEventListener("submit", (event) => {
   }
 }
 tablaDiv.appendChild(tabla);
-*/
+
 });
 
 
