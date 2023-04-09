@@ -1,6 +1,7 @@
 import cMatriz from "./crearmatriz";
 import { Matriz } from "./classmatriz";
 import { Conduccion } from "./classmanejo";
+import prueba1 from "./crearmatriz";
 const cadenalimite = document.querySelector("#cadena");
 const form = document.querySelector("#sumar-form");
 // const div = document.querySelector("#resultado-div");
@@ -12,7 +13,7 @@ var tablaDiv = document.getElementById("tabla-matriz");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  let miMatriz = cMatriz(cadenalimite.value);
+  let miMatriz = prueba1(cadenalimite.value);
   var tabla = document.createElement("table");
   for (var i = 0; i < miMatriz.length; i++) {
   var fila = tabla.insertRow();

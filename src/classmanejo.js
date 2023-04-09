@@ -4,6 +4,8 @@ export class Conduccion {
     constructor(mapa, coordenadas) {
         this._mapa = mapa;
         this._coordenadas = coordenadas;
+        this._posActualF;
+        this._posActualC;
     }
 
     get mapa() {
