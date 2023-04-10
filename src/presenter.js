@@ -1,6 +1,6 @@
-import cMatriz from "./crearmatriz";
-import { Matriz } from "./classmatriz";
-import { Conduccion } from "./classmanejo";
+// import cMatriz from "./crearmatriz";
+// import { Matriz } from "./classmatriz";
+// import { Conduccion } from "./classmanejo";
 import prueba1 from "./crearmatriz";
 const cadenalimite = document.querySelector("#cadena");
 const form = document.querySelector("#sumar-form");
