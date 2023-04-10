@@ -22,11 +22,11 @@ export class Conduccion {
         return this._posActualC;
     }
 
-    set posActualF(posActualF){
-        this._posActualF=posActualF;
+    set posActualF(nuevo_posActualF){
+        this._posActualF=nuevo_posActualF;
     }
-    set posActualC(posActualC){
-        this._posActualC=posActualC;
+    set posActualC(nuevo_posActualC){
+        this._posActualC=nuevo_posActualC;
     }
 
     insertar_Vehiculo_en_mapa() {
@@ -50,17 +50,19 @@ export class Conduccion {
 
     MovimientoConOrientacionNorte(cadena) {
         //A -1filas; I -1columnas ;D+1columnas
+        console.log(`${this.posActualF}`);
         let nuevaFila=this.posActualF;
         let nuevaColumna=this.posActualC;
 
-        if(cadena=="A"&& (nuevaFila-1<=0))
+        if(cadena=="A"&& (nuevaFila-1 >= 0))
         {
-            nuevaFila-=1;
+            nuevaFila--;
        
         }
-        if(cadena=="I"&& (nuevaColumna<=0)) nuevaColumna-=1;
+        if(cadena=="I"&& (nuevaColumna - 1 >= 0)) nuevaColumna-=1;
         if(cadena=="D"&& (nuevaColumna+1<this.mapa.columnas))nuevaColumna+=1;
-        this.mapa.matriz[this.posActualF][this.posActualC]=0;
+        
+        this.mapa.matriz[this.posActualF][this.posActualC]="[ ]";
         this.mapa.matriz[nuevaFila][nuevaColumna]=2;
         this.posActualF=nuevaFila;
         this.posActualC=nuevaColumna;
@@ -70,10 +72,10 @@ export class Conduccion {
         //A +1columna; I-1fila ; D+1 fila 
         let nuevaFila=this.posActualF;
         let nuevaColumna=this.posActualC;
-        if(cadena=="A"&& (nuevaColumna-1<this.mapa.columnas))nuevaColumna+=1;
-        if(cadena=="I"&& (nuevaFila-1<=0))nuevaFila-=1;
-        if(cadena=="D"&& (nuevaFila-1<this.mapa.filas))nuevaFila+=1;
-        this.mapa.matriz[this.posActualF][this.posActualC]=0;
+        if(cadena=="A"&& (nuevaColumna+1<this.mapa.columnas))nuevaColumna+=1;
+        if(cadena=="I"&& (nuevaFila-1>=0))nuevaFila-=1;
+        if(cadena=="D"&& (nuevaFila+1<this.mapa.filas))nuevaFila+=1;
+        this.mapa.matriz[this.posActualF][this.posActualC]="[ ]";
         this.mapa.matriz[nuevaFila][nuevaColumna]=2;
         this.posActualF=nuevaFila;
         this.posActualC=nuevaColumna;
@@ -84,10 +86,10 @@ export class Conduccion {
         //A -1columna; I+1fila ; D-1 fila
         let nuevaFila=this.posActualF;
         let nuevaColumna=this.posActualC;
-        if(cadena=="A"&& (nuevaColumna-1<=0)) nuevaColumna-=1;
-        if(cadena=="I"&& (nuevaFila-1<this.mapa.filas))nuevaFila+=1;
-        if(cadena=="D"&& (nuevaFila-1<=0)) nuevaFila-=1;
-        this.mapa.matriz[this.posActualF][this.posActualC]=0;
+        if(cadena=="A"&& (nuevaColumna-1>=0)) nuevaColumna-=1;
+        if(cadena=="I"&& (nuevaFila+1<this.mapa.filas))nuevaFila+=1;
+        if(cadena=="D"&& (nuevaFila-1>=0)) nuevaFila-=1;
+        this.mapa.matriz[this.posActualF][this.posActualC]="[ ]";
         this.mapa.matriz[nuevaFila][nuevaColumna]=2;
         this.posActualF=nuevaFila;
         this.posActualC=nuevaColumna;
