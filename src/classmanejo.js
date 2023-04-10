@@ -4,8 +4,8 @@ export class Conduccion {
     constructor(mapa, coordenadas) {
         this._mapa = mapa;
         this._coordenadas = coordenadas;
-        this._posActualF=0;
-        this._posActualC=0;
+        this._posActualF=this.coordenadas.filas;
+        this._posActualC=this._coordenadas.columnas;
     }
 
     get mapa() {
@@ -53,9 +53,13 @@ export class Conduccion {
         let nuevaFila=this.posActualF;
         let nuevaColumna=this.posActualC;
 
-        if(cadena="A"&& (nuevaFila-1<=0))nuevaFila+=1;
-        if(cadena="I"&& (nuevaColumna<=0)) nuevaColumna-=1;
-        if(cadena="D"&& (nuevaColumna+1<this.mapa.columnas))nuevaColumna+=1;
+        if(cadena=="A"&& (nuevaFila-1<=0))
+        {
+            nuevaFila-=1;
+       
+        }
+        if(cadena=="I"&& (nuevaColumna<=0)) nuevaColumna-=1;
+        if(cadena=="D"&& (nuevaColumna+1<this.mapa.columnas))nuevaColumna+=1;
         this.mapa.matriz[this.posActualF][this.posActualC]=0;
         this.mapa.matriz[nuevaFila][nuevaColumna]=2;
         this.posActualF=nuevaFila;
@@ -66,9 +70,9 @@ export class Conduccion {
         //A +1columna; I-1fila ; D+1 fila 
         let nuevaFila=this.posActualF;
         let nuevaColumna=this.posActualC;
-        if(cadena="A"&& (nuevaColumna-1<this.mapa.columnas))nuevaColumna+=1;
-        if(cadena="I"&& (nuevaFila-1<=0))nuevaFila-=1;
-        if(cadena="D"&& (nuevaFila-1<this.mapa.filas))nuevaFila+=1;
+        if(cadena=="A"&& (nuevaColumna-1<this.mapa.columnas))nuevaColumna+=1;
+        if(cadena=="I"&& (nuevaFila-1<=0))nuevaFila-=1;
+        if(cadena=="D"&& (nuevaFila-1<this.mapa.filas))nuevaFila+=1;
         this.mapa.matriz[this.posActualF][this.posActualC]=0;
         this.mapa.matriz[nuevaFila][nuevaColumna]=2;
         this.posActualF=nuevaFila;
@@ -80,9 +84,9 @@ export class Conduccion {
         //A -1columna; I+1fila ; D-1 fila
         let nuevaFila=this.posActualF;
         let nuevaColumna=this.posActualC;
-        if(cadena="A"&& (nuevaColumna-1<=0)) nuevaColumna-=1;
-        if(cadena="I"&& (nuevaFila-1<this.mapa.filas))nuevaFila+=1;
-        if(cadena="D"&& (nuevaFila-1<=0)) nuevaFila-=1;
+        if(cadena=="A"&& (nuevaColumna-1<=0)) nuevaColumna-=1;
+        if(cadena=="I"&& (nuevaFila-1<this.mapa.filas))nuevaFila+=1;
+        if(cadena=="D"&& (nuevaFila-1<=0)) nuevaFila-=1;
         this.mapa.matriz[this.posActualF][this.posActualC]=0;
         this.mapa.matriz[nuevaFila][nuevaColumna]=2;
         this.posActualF=nuevaFila;
