@@ -7,7 +7,7 @@ function prueba1(limitecadena) {
   let dimMatriz = instrucciones[0].split(",");
   let posInicial = instrucciones[1];
   let secuencia=instrucciones[2];
-
+  console.log(secuencia);
   posInicial = InsertarPosIni(posInicial);
 
   const filas = parseInt(dimMatriz[0]); 
