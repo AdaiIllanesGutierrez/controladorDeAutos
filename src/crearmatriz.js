@@ -1,12 +1,19 @@
 import { Matriz } from "./classmatriz";
 import { Conduccion } from "./classmanejo";
 import { Coordenada } from "./classcoordenada";
+let instrucciones;
+let dimMatriz;
+let posInicial ;
+let secuencia;
+let posFinalFila;
+let posFinalColumna;
 
 function prueba1(limitecadena) {
-  let instrucciones = limitecadena.split("/");
-  let dimMatriz = instrucciones[0].split(",");
-  let posInicial = instrucciones[1];
-  let secuencia=instrucciones[2];
+  instrucciones = limitecadena.split("/");
+  dimMatriz = instrucciones[0].split(",");
+  posInicial = instrucciones[1];
+  secuencia=instrucciones[2];
+
   console.log(secuencia);
   posInicial = InsertarPosIni(posInicial);
 
@@ -20,8 +27,22 @@ function prueba1(limitecadena) {
   let carro = new Conduccion(new Matriz(filas,columnas),new Coordenada(x,y,orientacion));
   carro.insertar_Vehiculo_en_mapa();
   carro.Movimientos(secuencia);
+  //posInicial=carro.coordenadas.x;
+  posFinalFila=carro._posActualF+1;
+  posFinalColumna=carro._posActualC+1;
+  console.log(posFinalFila);
+  console.log(posFinalColumna);
   return carro.mapa.matriz;
 }
+function MostrarPosInicial(){
+  console.log(posInicial);
+  return posInicial;
+}
+function MostrarMov(){
+  console.log(posInicial);
+  return secuencia;
+}
+
 
 function InsertarPosIni(cadenaPosini) {
   const orientacion = cadenaPosini[cadenaPosini.length - 1];
@@ -31,4 +52,4 @@ function InsertarPosIni(cadenaPosini) {
   return cadenaPosini;
 }
 
-export default prueba1;
+export {prueba1,MostrarPosInicial,MostrarMov};

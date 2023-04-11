@@ -1,12 +1,15 @@
 // import cMatriz from "./crearmatriz";
 // import { Matriz } from "./classmatriz";
-// import { Conduccion } from "./classmanejo";
-import prueba1 from "./crearmatriz";
+
+import {prueba1,MostrarPosInicial,MostrarMov} from "./crearmatriz";
 const cadenalimite = document.querySelector("#cadena");
 const form = document.querySelector("#sumar-form");
 // const div = document.querySelector("#resultado-div");
 // Obtener la referencia al elemento div que contendrá la tabla
 var tablaDiv = document.getElementById("tabla-matriz");
+let posInicialDiv=document.getElementById("posInicial");
+let movimientosDiv=document.getElementById("movimientos");
+let posFinalDiv=document.getElementById("posFinal");
 
 
 
@@ -22,7 +25,12 @@ form.addEventListener("submit", (event) => {
     celda.appendChild(document.createTextNode(miMatriz[i][j]));
   }
 }
+
 tablaDiv.appendChild(tabla);
+console.log(MostrarPosInicial());
+//posInicialDiv.innerHTML(MostrarPosInicial());
+posInicialDiv.innerHTML = "<p>" + MostrarPosInicial()+ "</p>";
+movimientosDiv.innerHTML = "<p>" + MostrarMov()+ "</p>";
 
 });
 

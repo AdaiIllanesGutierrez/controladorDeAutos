@@ -1,4 +1,3 @@
-import { Coordenada } from "./classcoordenada";
 
 export class Conduccion {
     constructor(mapa, coordenadas) {
