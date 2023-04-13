@@ -57,19 +57,65 @@ export class Conduccion {
         {
             nuevaFila--;
         }
-        if(cadena=="I"&& (nuevaColumna - 1 >= 0)) nuevaColumna-=1;
-        if(cadena=="D"&& (nuevaColumna+1<this.mapa.columnas))nuevaColumna+=1;
-        if(cadena == "J") nuevaFila = nuevaFila - 2;
+        else if(cadena=="A" && !nuevaFila-1 >= 0){
+            nuevaFila = this.mapa.filas - 1;
+        }
+        if(cadena=="I"&& (nuevaColumna - 1 >= 0)) {
+            nuevaColumna-=1;
+        }
+        else if(cadena=="I"&& !(nuevaColumna - 1 >= 0)){
+            nuevaColumna = this.mapa.columnas - 1;
+        }
+        if(cadena=="D"&& (nuevaColumna+1<this.mapa.columnas)){
+            nuevaColumna+=1;
+        }
+        else if(cadena=="D"&& !(nuevaColumna+1<this.mapa.columnas)){
+            nuevaColumna = 0;
+        }
+        if(cadena == "J" && nuevaFila-2 >= 0) {
+            nuevaFila = nuevaFila - 2;
+        }
+        else if(cadena == "J" && !nuevaFila-2 >= 0){
+            if(nuevaFila - 2 == 1){
+                nuevaColumna = 0;
+            }
+            else if(nuevaFila - 2 == 0) {
+                nuevaColumna = 1;
+            }
+        }
         this.ActualizacionPosicion(nuevaFila, nuevaColumna);
     }
     MovimientoConOrientacionEste(cadena){
         //A +1columna; I-1fila ; D+1 fila 
         let nuevaFila=this.posActualF;
         let nuevaColumna=this.posActualC;
-        if(cadena=="A"&& (nuevaColumna+1<this.mapa.columnas))nuevaColumna+=1;
-        if(cadena=="I"&& (nuevaFila-1>=0))nuevaFila-=1;
-        if(cadena=="D"&& (nuevaFila+1<this.mapa.filas))nuevaFila+=1;
-        if(cadena == "J") nuevaColumna = nuevaColumna + 2;
+        if(cadena=="A"&& (nuevaColumna+1<this.mapa.columnas)){
+            nuevaColumna+=1;
+        }
+        else if (cadena=="A"&& !(nuevaColumna+1<this.mapa.columnas)){
+            nuevaColumna = 0;
+        }
+        if(cadena=="I"&& (nuevaFila-1>=0)){
+            nuevaFila-=1;
+        }
+        else if(cadena=="I"&& !(nuevaFila-1>=0)) {
+            nuevaFila = this.mapa.filas - 1;
+        }
+        if(cadena=="D"&& (nuevaFila+1<this.mapa.filas)){
+            nuevaFila+=1;
+        }
+        else if(cadena=="D"&& !(nuevaFila+1<this.mapa.filas)){
+            nuevaFila = 0;
+        }
+        if(cadena == "J" && (nuevaColumna+2<this.mapa.columnas)) {
+            nuevaColumna = nuevaColumna + 2;
+        }
+        else if(cadena == "J" && !(nuevaColumna+2<this.mapa.columnas)){
+            nuevaColumna = this.mapa.columnas - this.posActualC - 1;
+            if(nuevaColumna < 0){
+                nuevaColumna = 1;
+            }
+        }
         this.ActualizacionPosicion(nuevaFila, nuevaColumna);
 
     }
@@ -78,9 +124,24 @@ export class Conduccion {
         //A -1columna; I+1fila ; D-1 fila
         let nuevaFila=this.posActualF;
         let nuevaColumna=this.posActualC;
-        if(cadena=="A"&& (nuevaColumna-1>=0)) nuevaColumna-=1;
-        if(cadena=="I"&& (nuevaFila+1<this.mapa.filas))nuevaFila+=1;
-        if(cadena=="D"&& (nuevaFila-1>=0)) nuevaFila-=1;
+        if(cadena=="A"&& (nuevaColumna-1>=0)) {
+            nuevaColumna-=1;
+        }
+        else if(cadena=="A"&& !(nuevaColumna-1>=0)){
+            nuevaColumna = this.mapa.columnas - 1;
+        }
+        if(cadena=="I"&& (nuevaFila+1<this.mapa.filas)) {
+            nuevaFila+=1;
+        }
+        else if(cadena=="I"&& !(nuevaFila+1<this.mapa.filas)){
+
+        }
+        if(cadena=="D"&& (nuevaFila-1>=0)){
+            nuevaFila-=1;
+        } 
+        else if(cadena=="D"&& (nuevaFila-1>=0)) {
+            
+        }
         if(cadena == "J") nuevaColumna = nuevaColumna - 2;
         this.ActualizacionPosicion(nuevaFila, nuevaColumna);
     }
