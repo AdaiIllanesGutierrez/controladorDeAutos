@@ -88,5 +88,6 @@ export class Conduccion {
         this.posActualF=nuevaFila;
         this.posActualC=nuevaColumna;
     }
+    
 
 }

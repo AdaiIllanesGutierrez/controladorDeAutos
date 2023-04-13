@@ -1,18 +1,31 @@
-<html>
-  <body>
-    <h1>Controlador de Autos</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Controlador de Autos</h1>
     <form id="sumar-form">
-      <label for="cadena">Filas y columnas:</label>
-      <input type="text" id="cadena" />
+      <p>INSTRUCCIONES: para la parte de los comandos la manera de introducir es la siguiente: </p>
+      <p> tamaño de la matriz / posicion inicial con la orientacion / comandos </p>
+      <p>ejemplo: (5,5/3,3N/ADADADI)</p>
+
+      <label for="cadena">Comandos: </label>
+      <input type="text" id="cadena" placeholder="5,5/1,1E/AIIA"/>
       <input type="submit" value="mostrar" id="button" />
     </form>
+
     <div id="tabla-matriz" ></div><br>
-    <label for="posInicial">POSICION INICIAL:</label>
-    <div id="posInicial" ></div><br>
-    <label for="movimientos">MOVIMIENTOS:</label>
-    <div id="movimientos" ></div><br>
-    <label for="posFinal">POSICION FINAL:</label>
-    <div id="posFinal" ></div><br>
+    
+    <b for="posInicial">POSICION INICIAL:</b>
+    <div id="posInicial" ></div>
+    <b  for="movimientos">MOVIMIENTOS:</b >
+    <div id="movimientos" ></div>
+    <b for="posFinal">POSICION FINAL:</b >
+    <div id="posFinal" ></div>
     <script type="module" src="./src/presenter.js"></script>
-  </body>
+</body>
 </html>

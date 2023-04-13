@@ -31,13 +31,21 @@ function prueba1(limitecadena) {
   posFinalColumna=carro._posActualC+1;
   return carro.mapa.matriz;
 }
+
 function MostrarPosInicial(){
   return posInicial;
 }
+
 function MostrarMov(){
   return secuencia;
 }
 
+function MostrarPosFinal(){
+ let nPosFinal=toString(posFinalColumna);
+  nPosFinal+=","+toString( carro.mapa.filas-posFinalFila);
+
+  return nPosFinal;
+}
 
 function InsertarPosIni(cadenaPosini) {
   const orientacion = cadenaPosini[cadenaPosini.length - 1];
@@ -47,4 +55,4 @@ function InsertarPosIni(cadenaPosini) {
   return cadenaPosini;
 }
 
-export {prueba1,MostrarPosInicial,MostrarMov};
+export {prueba1,MostrarPosInicial,MostrarMov,MostrarPosFinal};

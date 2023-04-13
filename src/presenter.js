@@ -1,7 +1,7 @@
 // import cMatriz from "./crearmatriz";
 // import { Matriz } from "./classmatriz";
 
-import {prueba1,MostrarPosInicial,MostrarMov} from "./crearmatriz";
+import {prueba1,MostrarPosInicial,MostrarMov,MostrarPosFinal} from "./crearmatriz";
 const cadenalimite = document.querySelector("#cadena");
 const form = document.querySelector("#sumar-form");
 // const div = document.querySelector("#resultado-div");
@@ -31,6 +31,7 @@ console.log(MostrarPosInicial());
 //posInicialDiv.innerHTML(MostrarPosInicial());
 posInicialDiv.innerHTML = "<p>" + MostrarPosInicial()+ "</p>";
 movimientosDiv.innerHTML = "<p>" + MostrarMov()+ "</p>";
+posFinalDiv.innerHTML="<p>"+MostrarPosFinal()+"</p>";
 
 });
 
