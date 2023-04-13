@@ -1,6 +1,7 @@
 import { Matriz } from "./classmatriz";
 import { Conduccion } from "./classmanejo";
 import { Coordenada } from "./classcoordenada";
+
 let instrucciones;
 let dimMatriz;
 let posInicial ;
@@ -8,6 +9,7 @@ let secuencia;
 let posFinalFila;
 let posFinalColumna;
 let carro;
+
 function prueba1(limitecadena) {
   instrucciones = limitecadena.split("/");
   dimMatriz = instrucciones[0].split(",");
@@ -43,9 +45,10 @@ function MostrarMov(){
 function MostrarPosFinal(){
  let nPosFinal="";
  
-  nPosFinal= toString(carro.mapa.filas);
+  nPosFinal=(parseInt(dimMatriz[0])-parseInt(posFinalFila)+1);
   console.log(nPosFinal);
-  return nPosFinal;
+
+  return  posFinalColumna +","+nPosFinal;
 }
 
 function InsertarPosIni(cadenaPosini) {
