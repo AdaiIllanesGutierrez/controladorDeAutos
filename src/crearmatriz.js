@@ -10,7 +10,7 @@ let posFinalFila;
 let posFinalColumna;
 let carro;
 
-function prueba1(limitecadena) {
+function insercion_Recorrido_del_Carro(limitecadena) {
   instrucciones = limitecadena.split("/");
   dimMatriz = instrucciones[0].split(",");
   posInicial = instrucciones[1];
@@ -56,4 +56,4 @@ function InsertarPosIni(cadenaPosini) {
   return cadenaPosini;
 }
 
-export {prueba1,MostrarPosInicial,MostrarMov,MostrarPosFinal};
+export {insercion_Recorrido_del_Carro,MostrarPosInicial,MostrarMov,MostrarPosFinal};

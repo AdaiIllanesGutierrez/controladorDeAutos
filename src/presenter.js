@@ -1,7 +1,7 @@
 // import cMatriz from "./crearmatriz";
 // import { Matriz } from "./classmatriz";
 
-import {prueba1,MostrarPosInicial,MostrarMov,MostrarPosFinal} from "./crearmatriz";
+import {insercion_Recorrido_del_Carro,MostrarPosInicial,MostrarMov,MostrarPosFinal} from "./crearmatriz";
 const cadenalimite = document.querySelector("#cadena");
 const form = document.querySelector("#sumar-form");
 // const div = document.querySelector("#resultado-div");
@@ -16,7 +16,7 @@ let posFinalDiv=document.getElementById("posFinal");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  let miMatriz = prueba1(cadenalimite.value);
+  let miMatriz = insercion_Recorrido_del_Carro(cadenalimite.value);
   var tabla = document.createElement("table");
   for (var i = 0; i < miMatriz.length; i++) {
   var fila = tabla.insertRow();
