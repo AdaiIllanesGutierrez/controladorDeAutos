@@ -60,6 +60,8 @@ export class Conduccion {
         if(cadena=="J"&& (nuevaFila-1 >= 0))
         {
             nuevaFila=nuevaFila-2;
+        }else if (cadena=="J"&& nuevaFila-1 <= 0){
+            nuevaFila=mapa.Conduccion.filas;
         }
         if(cadena=="I"&& (nuevaColumna - 1 >= 0)) nuevaColumna-=1;
         if(cadena=="D"&& (nuevaColumna+1<this.mapa.columnas))nuevaColumna+=1;

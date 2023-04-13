@@ -18,6 +18,12 @@ describe("Controlador de Carrito", () => {
     it("Deberia recibir la posicion finalque se espera que este del carro con el comando J  Y realizar un salto ", () => {
         expect(insercion_Recorrido_del_Carro("5,5/3,3N/J")[0][2]).toEqual(1);
     });
+    it("Deberia recibir la posicion finalque se espera que este del carro con el comando J  Y realizar un salto ", () => {
+        expect(insercion_Recorrido_del_Carro("5,5/3,1N/JJ")[0][2]).toEqual(1);
+    });
+    it("Deberia recibir la posicion finalque se espera que este del carro con el comando J  Y realizar un salto ", () => {
+        expect(insercion_Recorrido_del_Carro("5,5/3,3N/JJ")[4][2]).toEqual(1);
+    });
 
   });
   
