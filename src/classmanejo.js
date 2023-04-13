@@ -59,6 +59,7 @@ export class Conduccion {
         }
         if(cadena=="I"&& (nuevaColumna - 1 >= 0)) nuevaColumna-=1;
         if(cadena=="D"&& (nuevaColumna+1<this.mapa.columnas))nuevaColumna+=1;
+        if(cadena == "J") nuevaFila = nuevaFila - 2;
         this.ActualizacionPosicion(nuevaFila, nuevaColumna);
     }
     MovimientoConOrientacionEste(cadena){
@@ -68,6 +69,7 @@ export class Conduccion {
         if(cadena=="A"&& (nuevaColumna+1<this.mapa.columnas))nuevaColumna+=1;
         if(cadena=="I"&& (nuevaFila-1>=0))nuevaFila-=1;
         if(cadena=="D"&& (nuevaFila+1<this.mapa.filas))nuevaFila+=1;
+        if(cadena == "J") nuevaColumna = nuevaColumna + 2;
         this.ActualizacionPosicion(nuevaFila, nuevaColumna);
 
     }
@@ -79,6 +81,7 @@ export class Conduccion {
         if(cadena=="A"&& (nuevaColumna-1>=0)) nuevaColumna-=1;
         if(cadena=="I"&& (nuevaFila+1<this.mapa.filas))nuevaFila+=1;
         if(cadena=="D"&& (nuevaFila-1>=0)) nuevaFila-=1;
+        if(cadena == "J") nuevaColumna = nuevaColumna - 2;
         this.ActualizacionPosicion(nuevaFila, nuevaColumna);
     }
     
