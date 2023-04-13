@@ -1,5 +1,6 @@
 import { Matriz } from "./classmatriz";
 import { Coordenada } from "./classcoordenada";
+import {prueba1,MostrarPosInicial,MostrarMov,MostrarPosFinal} from "./crearmatriz";
 
 describe("Controlador de Carrito", () => {
     it("Deberia recibir la dimension de la matriz", () => {
@@ -11,11 +12,10 @@ describe("Controlador de Carrito", () => {
     it("Deberia recibir la posicion y de la coordenada", () => {
         expect(new Coordenada(2,3, "N").y).toEqual(3);
     });
-    it("Deberia recibir la oreintacion de la coordenada", () => {
-        expect(new Coordenada(2,3, "N").orientacion).toEqual("N");
+    it("Deberia recibir la posicion final del carro en la matriz", () => {
+        expect(prueba1("5,5/3,3N/A")[1][2]).toEqual(1);
     });
-    it("Deberia recibir la oreintacion de la coordenada", () => {
-        expect(new Coordenada(2,3, "N").orientacion).toEqual("N");
-    });
+    
+
   });
   

@@ -28,9 +28,9 @@ function prueba1(limitecadena) {
   carro = new Conduccion(new Matriz(filas,columnas),new Coordenada(x,y,orientacion));
   carro.insertar_Vehiculo_en_mapa();
   carro.Movimientos(secuencia);
-  //posInicial=carro.coordenadas.x;
   posFinalFila=carro._posActualF+1;
   posFinalColumna=carro._posActualC+1;
+  
   return carro.mapa.matriz;
 }
 
@@ -44,11 +44,8 @@ function MostrarMov(){
 
 function MostrarPosFinal(){
  let nPosFinal="";
- 
   nPosFinal=(parseInt(dimMatriz[0])-parseInt(posFinalFila)+1);
-  console.log(nPosFinal);
-
-  return  posFinalColumna +","+nPosFinal;
+  return  posFinalColumna +","+nPosFinal+ carro.coordenadas.orientacion;
 }
 
 function InsertarPosIni(cadenaPosini) {
