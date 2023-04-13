@@ -7,7 +7,7 @@ let posInicial ;
 let secuencia;
 let posFinalFila;
 let posFinalColumna;
-
+let carro;
 function prueba1(limitecadena) {
   instrucciones = limitecadena.split("/");
   dimMatriz = instrucciones[0].split(",");
@@ -23,7 +23,7 @@ function prueba1(limitecadena) {
   const y = parseInt(posInicial[1]);
   const orientacion = posInicial[2];
 
-  let carro = new Conduccion(new Matriz(filas,columnas),new Coordenada(x,y,orientacion));
+  carro = new Conduccion(new Matriz(filas,columnas),new Coordenada(x,y,orientacion));
   carro.insertar_Vehiculo_en_mapa();
   carro.Movimientos(secuencia);
   //posInicial=carro.coordenadas.x;
@@ -41,9 +41,10 @@ function MostrarMov(){
 }
 
 function MostrarPosFinal(){
- let nPosFinal=toString(posFinalColumna);
-  nPosFinal+=","+toString( carro.mapa.filas-posFinalFila);
-
+ let nPosFinal="";
+ 
+  nPosFinal= toString(carro.mapa.filas);
+  console.log(nPosFinal);
   return nPosFinal;
 }
 
