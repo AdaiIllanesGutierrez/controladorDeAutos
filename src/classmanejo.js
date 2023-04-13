@@ -1,3 +1,4 @@
+import { Matriz } from "./classmatriz";
 
 export class Conduccion {
     constructor(mapa, coordenadas) {
@@ -49,23 +50,16 @@ export class Conduccion {
 
     MovimientoConOrientacionNorte(cadena) {
         //A -1filas; I -1columnas ;D+1columnas
-        console.log(`${this.posActualF}`);
         let nuevaFila=this.posActualF;
         let nuevaColumna=this.posActualC;
 
         if(cadena=="A"&& (nuevaFila-1 >= 0))
         {
             nuevaFila--;
-       
         }
         if(cadena=="I"&& (nuevaColumna - 1 >= 0)) nuevaColumna-=1;
         if(cadena=="D"&& (nuevaColumna+1<this.mapa.columnas))nuevaColumna+=1;
-        
-        this.mapa.matriz[this.posActualF][this.posActualC]="[ ]";
-        this.mapa.matriz[nuevaFila][nuevaColumna]=2;
-        this.posActualF=nuevaFila;
-        this.posActualC=nuevaColumna;
-
+        this.ActualizacionPosicion(nuevaFila, nuevaColumna);
     }
     MovimientoConOrientacionEste(cadena){
         //A +1columna; I-1fila ; D+1 fila 
@@ -74,10 +68,7 @@ export class Conduccion {
         if(cadena=="A"&& (nuevaColumna+1<this.mapa.columnas))nuevaColumna+=1;
         if(cadena=="I"&& (nuevaFila-1>=0))nuevaFila-=1;
         if(cadena=="D"&& (nuevaFila+1<this.mapa.filas))nuevaFila+=1;
-        this.mapa.matriz[this.posActualF][this.posActualC]="[ ]";
-        this.mapa.matriz[nuevaFila][nuevaColumna]=2;
-        this.posActualF=nuevaFila;
-        this.posActualC=nuevaColumna;
+        this.ActualizacionPosicion(nuevaFila, nuevaColumna);
 
     }
 
@@ -88,11 +79,14 @@ export class Conduccion {
         if(cadena=="A"&& (nuevaColumna-1>=0)) nuevaColumna-=1;
         if(cadena=="I"&& (nuevaFila+1<this.mapa.filas))nuevaFila+=1;
         if(cadena=="D"&& (nuevaFila-1>=0)) nuevaFila-=1;
+        this.ActualizacionPosicion(nuevaFila, nuevaColumna);
+    }
+    
+    ActualizacionPosicion(nuevaFila, nuevaColumna) {
         this.mapa.matriz[this.posActualF][this.posActualC]="[ ]";
-        this.mapa.matriz[nuevaFila][nuevaColumna]=2;
+        this.mapa.matriz[nuevaFila][nuevaColumna]= 1;
         this.posActualF=nuevaFila;
         this.posActualC=nuevaColumna;
     }
-    
 
 }

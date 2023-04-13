@@ -14,7 +14,6 @@ function prueba1(limitecadena) {
   posInicial = instrucciones[1];
   secuencia=instrucciones[2];
 
-  console.log(secuencia);
   posInicial = InsertarPosIni(posInicial);
 
   const filas = parseInt(dimMatriz[0]); 
@@ -30,16 +29,12 @@ function prueba1(limitecadena) {
   //posInicial=carro.coordenadas.x;
   posFinalFila=carro._posActualF+1;
   posFinalColumna=carro._posActualC+1;
-  console.log(posFinalFila);
-  console.log(posFinalColumna);
   return carro.mapa.matriz;
 }
 function MostrarPosInicial(){
-  console.log(posInicial);
   return posInicial;
 }
 function MostrarMov(){
-  console.log(posInicial);
   return secuencia;
 }
 
