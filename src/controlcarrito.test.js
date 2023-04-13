@@ -15,6 +15,9 @@ describe("Controlador de Carrito", () => {
     it("Deberia recibir la posicion final del carro en la matriz", () => {
         expect(insercion_Recorrido_del_Carro("5,5/3,3N/A")[1][2]).toEqual(1);
     });
+    it("Deberia recibir el comando J  y devolver la cantidad de espacios que avanza ", () => {
+        expect(insercion_Recorrido_del_Carro("5,5/3,3N/J")[1][2]).toEqual(1);
+    });
 
   });
   

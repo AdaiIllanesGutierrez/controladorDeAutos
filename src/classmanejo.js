@@ -57,8 +57,13 @@ export class Conduccion {
         {
             nuevaFila--;
         }
+        if(cadena=="J"&& (nuevaFila-1 >= 0))
+        {
+            nuevaFila=nuevaFila-2;
+        }
         if(cadena=="I"&& (nuevaColumna - 1 >= 0)) nuevaColumna-=1;
         if(cadena=="D"&& (nuevaColumna+1<this.mapa.columnas))nuevaColumna+=1;
+    
         this.ActualizacionPosicion(nuevaFila, nuevaColumna);
     }
     MovimientoConOrientacionEste(cadena){

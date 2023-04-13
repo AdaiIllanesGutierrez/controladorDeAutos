@@ -21,7 +21,7 @@ form.addEventListener("submit", (event) => {
   }
 }
 
-//tablaDiv.appendChild(tabla);
+tablaDiv.appendChild(tabla);
 console.log(MostrarPosInicial());
 //posInicialDiv.innerHTML(MostrarPosInicial());
 posInicialDiv.innerHTML = "<p>" + MostrarPosInicial()+ "</p>";
