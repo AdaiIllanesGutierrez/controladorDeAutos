@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Carrito</title>
+  <link href="bootstrap (1).css" rel="stylesheet">
+ 
 </head>
-<body>
+<body style="background-color: rgb(232, 232, 232);">
+  <center>
   <h1>Controlador de Autos</h1>
     <form id="sumar-form">
       <p>INSTRUCCIONES: para la parte de los comandos la manera de introducir es la siguiente: </p>
@@ -15,11 +18,11 @@
 
       <label for="cadena">Comandos: </label>
       <input type="text" id="cadena" placeholder="5,5/1,1E/AIIA"/>
-      <input type="submit" value="mostrar" id="button" />
+      <input type="submit" value="mostrar" id="button" class="btn btn-dark " />
     </form>
 
-    <div id="tabla-matriz" ></div><br>
-    
+    <div id="tabla-matriz" class="cuadro"></div><br>
+  
     <b for="posInicial">POSICION INICIAL:</b>
     <div id="posInicial" ></div>
     <b  for="movimientos">MOVIMIENTOS:</b >
@@ -27,5 +30,6 @@
     <b for="posFinal">POSICION FINAL:</b >
     <div id="posFinal" ></div>
     <script type="module" src="./src/presenter.js"></script>
+  </center>
 </body>
 </html>

@@ -1,5 +1,3 @@
-// import cMatriz from "./crearmatriz";
-// import { Matriz } from "./classmatriz";
 
 import {insercion_Recorrido_del_Carro,MostrarPosInicial,MostrarMov,MostrarPosFinal} from "./crearmatriz";
 const cadenalimite = document.querySelector("#cadena");

@@ -30,7 +30,7 @@ export class Conduccion {
     }
 
     insertar_Vehiculo_en_mapa() {
-        this.mapa.insertar_valor_por_defecto("[ ]");
+        this.mapa.insertar_valor_por_defecto("_");
         const columna = this.coordenadas.x - 1;
         const fila = this.mapa.filas - this.coordenadas.y;
         this.mapa.matriz[fila][columna] = 1;
@@ -83,11 +83,11 @@ export class Conduccion {
     }
     
     ActualizacionPosicion(nuevaFila, nuevaColumna) {
-        this.mapa.matriz[this.posActualF][this.posActualC]="[ ]";
+        this.mapa.matriz[this.posActualF][this.posActualC]="*";
         this.mapa.matriz[nuevaFila][nuevaColumna]= 1;
         this.posActualF=nuevaFila;
         this.posActualC=nuevaColumna;
     }
-    
+
 
 }
