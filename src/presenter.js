@@ -9,9 +9,6 @@ let posInicialDiv=document.getElementById("posInicial");
 let movimientosDiv=document.getElementById("movimientos");
 let posFinalDiv=document.getElementById("posFinal");
 
-
-
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   let miMatriz = insercion_Recorrido_del_Carro(cadenalimite.value);
@@ -24,7 +21,7 @@ form.addEventListener("submit", (event) => {
   }
 }
 
-tablaDiv.appendChild(tabla);
+//tablaDiv.appendChild(tabla);
 console.log(MostrarPosInicial());
 //posInicialDiv.innerHTML(MostrarPosInicial());
 posInicialDiv.innerHTML = "<p>" + MostrarPosInicial()+ "</p>";
